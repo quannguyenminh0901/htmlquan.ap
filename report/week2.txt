@@ -17,4 +17,4 @@
 
 ## CÔNG VIỆC TUẦN
 
--Làm navigation bar
+-Làm main, css
