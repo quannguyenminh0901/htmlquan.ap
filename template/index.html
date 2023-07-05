@@ -8,7 +8,10 @@
 		<!--Title-->
 		<title>htmlLearn</title>
 		<!--css-->
-		<link rel="stylesheet" href="/static/fontawesome-free-6.4.0-web/css/all.css">
+		<link
+			rel="stylesheet"
+			href="/static/fontawesome-free-6.4.0-web/css/all.css"
+		/>
 		<link rel="stylesheet" href="/static/style.css" />
 	</head>
 	<body>
@@ -21,17 +24,28 @@
 						<div class="wrap-site-logo">
 							<a title="HTMLlearn" href="#">
 								<img src="/images/logo.png" alt="" class="site-logo" />
-								<img src="/images/logo-mobile.jpg" alt="" class="site-logo-mobile" />
+								<img
+									src="/images/logo-mobile.jpg"
+									alt=""
+									class="site-logo-mobile"
+								/>
 							</a>
 						</div>
 						<!--WRAPPER RIGHT HEADER-->
 						<div class="wrap-right-header">
+							<input
+								type="checkbox"
+								id="mobile-menu-cb"
+								class="menu-checkbox"
+							/>
 							<label for="mobile-menu-cb" class="hamburger-button">
-								<span class="hamburger-icon"><i class="fa-solid fa-bars"></i></i></span>
+								<span class="hamburger-icon onclick="myFunction()""
+									><i class="fa-solid fa-bars"></i
+								></span>
 							</label>
 							<label for="mobile-menu-cb" class="hamburger-menu-mask"></label>
 							<nav class="site-menu">
-								<ul class="menu menu-main-menu">
+								<ul class="menu menu-main-menu" id="main-menu-dropdown">
 									<!--LIST MENU MAIN-->
 									<li><a class="current" href="#">Learing</a></li>
 									<li><a class="current" href="#">Training</a></li>
@@ -47,22 +61,34 @@
 										title="English"
 										role="button"
 									>
-										<img src="/images/en.jpg" alt="" class="btn-language btn-img flag" />
+										<img
+											src="/images/en.jpg"
+											alt=""
+											class="btn-language btn-img flag"
+										/>
 									</a>
 									<ul class="dropdown-menu">
 										<li>
 											<span class="change-lang">
-												<img src="/images/en.jpg" alt="" class="icon-language" />English
+												<img
+													src="/images/en.jpg"
+													alt=""
+													class="icon-language"
+												/>English
 											</span>
 										</li>
 										<li>
 											<span class="change-lang">
-												<img src="/images/vn.png" alt="" class="icon-language" />Tiếng Việt
+												<img
+													src="/images/vn.png"
+													alt=""
+													class="icon-language"
+												/>Tiếng Việt
 											</span>
 										</li>
 									</ul>
 								</div>
-							</nav>	
+							</nav>
 							<!--BUTTON LOG-->
 							<ul class="site-user-menu">
 								<li>
@@ -74,10 +100,14 @@
 					</header>
 				</article>
 				<article class="widget-nav widget-bread-cumps">
-					<div class="fb-customer-chat" attribution="setup_tool" page_id=""></div>
+					<div
+						class="fb-customer-chat"
+						attribution="setup_tool"
+						page_id=""
+					></div>
 				</article>
 			</div>
-		</div>		
+		</div>
 		<!--MAIN-->
 		<main>
 			<div id="layout-main" class="group">
@@ -85,19 +115,18 @@
 					<section class="wrap-block-user">
 						<div class="container">
 							<h3 class="learntohtml-h3">
-								Hello. Is this the first time you visit &nbsp; <span>HTML
-								</span> learn? &nbsp; <button class="btn-register-second">
-									start</button> &nbsp; to explore more!
+								Hello. Is this the first time you visit &nbsp;
+								<span>HTML </span> learn? &nbsp;
+								<button class="btn-register-second">start</button> &nbsp; to
+								explore more!
 							</h3>
 							<div class="wrap-main-user">
 								<h2 class="welcome-user">
 									"Hello " <span></span>". Welcome you to HTMLlearn. Let's "
-									<a
-									title="start" class="open-tour">"start"</a>" to explore more! "
+									<a title="start" class="open-tour">"start"</a>" to explore
+									more! "
 								</h2>
-								<div class="wrap-user-profile">
-
-								</div>
+								<div class="wrap-user-profile"></div>
 							</div>
 						</div>
 					</section>
@@ -118,57 +147,84 @@
 										<article class="courses-item" id="html">
 											<a href="#" title="" class="wrap-courses-item">
 												<div class="thumb">
-													<img src="/images/html-logo.png" alt="html">
+													<img src="/images/html-logo.png" alt="html" />
 												</div>
 												<div class="view-content">
 													<h3 class="courses-title">HTML</h3>
-													<p>Lorem adasdsadasdasd</p>
-													<div class="courses-info"></div>
+													<p>
+														HTML is the standard markup language for Web pages.
+														With HTML you can create your own Website. HTML is
+														easy to learn - You will enjoy it!
+													</p>
+													<div class="courses-info">
 														<span class="lesson-count">
-															<i class="icon-desktop"></i>" 32"
+															<i class="fas fa-tasks-alt"></i>&nbsp;32
 														</span>
 														<span class="time">
-															<i class="icon-block"></i>" 20:00:00"
+															<i class="fas fa-clock"></i>&nbsp;20:00:00
 														</span>
-														<span class="btn-round" title="">Join now</span>
-												</div>
-											</a>
-										</article>
-										<article class="courses-item" id="svg">
-											<a href="#" title="" class="wrap-courses-item">
-												<div class="thumb">
-													<img src="/images/svg-logo.png" alt="svg">
-												</div>
-												<div class="view-content">
-													<h3 class="courses-title">SVG</h3>
-													<p>Lorem adasdsadasdasd</p>
-													<div class="courses-info"></div>
-														<span class="lesson-count">
-															<i class="icon-desktop"></i>" 32"
-														</span>
-														<span class="time">
-															<i class="icon-block"></i>" 20:00:00"
-														</span>
-														<span class="btn-round" title="">Join now</span>
+														<span class="btn-round" title=""
+															><button class="join-courses">
+																Join now
+															</button></span
+														>
+													</div>
 												</div>
 											</a>
 										</article>
 										<article class="courses-item" id="css">
 											<a href="#" title="" class="wrap-courses-item">
 												<div class="thumb">
-													<img src="/images/css-logo.png" alt="css">
+													<img src="/images/css-logo.png" alt="css" />
 												</div>
 												<div class="view-content">
 													<h3 class="courses-title">CSS</h3>
-													<p>Lorem adasdsadasdasd</p>
-													<div class="courses-info"></div>
+													<p>
+														CSS is the language we use to style an HTML
+														document. CSS describes how HTML elements should be
+														displayed. This tutorial will teach you CSS from
+														basic to advanced.
+													</p>
+													<div class="courses-info">
 														<span class="lesson-count">
-															<i class="icon-desktop"></i>" 32"
+															<i class="fas fa-tasks-alt"></i>&nbsp;32
 														</span>
 														<span class="time">
-															<i class="icon-block"></i>" 20:00:00"
+															<i class="fas fa-clock"></i>&nbsp;20:00:00
 														</span>
-														<span class="btn-round" title="">Join now</span>
+														<span class="btn-round" title=""
+															><button class="join-courses">
+																Join now
+															</button></span
+														>
+													</div>
+												</div>
+											</a>
+										</article>
+										<article class="courses-item" id="svg">
+											<a href="#" title="" class="wrap-courses-item">
+												<div class="thumb">
+													<img src="/images/svg-logo.png" alt="svg" />
+												</div>
+												<div class="view-content">
+													<h3 class="courses-title">SVG</h3>
+													<p>
+														SVG stands for Scalable Vector Graphics. SVG defines
+														vector-based graphics in XML format.
+													</p>
+													<div class="courses-info">
+														<span class="lesson-count">
+															<i class="fas fa-tasks-alt"></i>&nbsp;32
+														</span>
+														<span class="time">
+															<i class="fas fa-clock"></i>&nbsp;20:00:00
+														</span>
+														<span class="btn-round" title=""
+															><button class="join-courses">
+																Join now
+															</button></span
+														>
+													</div>
 												</div>
 											</a>
 										</article>
@@ -176,8 +232,6 @@
 								</div>
 							</div>
 						</div>
-						
-
 					</section>
 					<section class="wrap-block-training"></section>
 					<section class="wrap-block-challenge"></section>
