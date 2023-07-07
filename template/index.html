@@ -33,13 +33,14 @@
 						</div>
 						<!--WRAPPER RIGHT HEADER-->
 						<div class="wrap-right-header">
+							<!--HAMBURGUR-->
 							<input
 								type="checkbox"
 								id="mobile-menu-cb"
 								class="menu-checkbox"
 							/>
 							<label for="mobile-menu-cb" class="hamburger-button">
-								<span class="hamburger-icon onclick="myFunction()""
+								<span class="hamburger-icon" onclick="myFunction()"
 									><i class="fa-solid fa-bars"></i
 								></span>
 							</label>
@@ -114,18 +115,18 @@
 				<div class="wrap-home-content">
 					<section class="wrap-block-user">
 						<div class="container">
-							<h3 class="learntohtml-h3">
+							<h4 class="welcome">
 								Hello. Is this the first time you visit &nbsp;
 								<span>HTML </span> learn? &nbsp;
 								<button class="btn-register-second">start</button> &nbsp; to
 								explore more!
-							</h3>
+							</h4>
 							<div class="wrap-main-user">
-								<h2 class="welcome-user">
+								<h4 class="welcome-user">
 									"Hello " <span></span>". Welcome you to HTMLlearn. Let's "
 									<a title="start" class="open-tour">"start"</a>" to explore
 									more! "
-								</h2>
+								</h4>
 								<div class="wrap-user-profile"></div>
 							</div>
 						</div>
@@ -137,34 +138,45 @@
 								<a href="#">See all</a>
 							</h3>
 							<div class="wrap-tab-control">
-								<ul class="tab-control">
-									<li class="courses">Suggested Courses</li>
-									<li class="in-progress">In progress</li>
-									<li class="completed">Completed</li>
+								<span class="mobile-dropdown-control">
+									<select class="mobile-dropdown-control-select">
+										<option value="#suggested-courses">
+											Suggested courses
+										</option>
+										<option value="#progress">In progress</option>
+										<option value="#completed">Completed</option>
+									</select>
+								</span>
+								<ul class="cl-tab-control">
+									<li class="courses"><a href="#">Suggested Courses</a></li>
+									<li class="in-progress"><a href="#">In progress</a></li>
+									<li class="completed"><a href="#">Completed</a></li>
 								</ul>
-								<div class="wrap-courses-tab">
-									<div class="row-list-courses">
-										<article class="courses-item" id="html">
-											<a href="#" title="" class="wrap-courses-item">
-												<div class="thumb">
+							</div>
+							<div class="wrap-course-tab">
+								<div class="cl-tab-item active">
+									<div class="row-list-course">
+										<article class="course-item" id="html">
+											<a href="#" title="" class="wrap-course-item">
+												<div class="course-thumb">
 													<img src="/images/html-logo.png" alt="html" />
 												</div>
 												<div class="view-content">
-													<h3 class="courses-title">HTML</h3>
+													<h3 class="course-title">HTML</h3>
 													<p>
 														HTML is the standard markup language for Web pages.
 														With HTML you can create your own Website. HTML is
 														easy to learn - You will enjoy it!
 													</p>
-													<div class="courses-info">
+													<div class="course-info">
 														<span class="lesson-count">
 															<i class="fas fa-tasks-alt"></i>&nbsp;32
 														</span>
 														<span class="time">
 															<i class="fas fa-clock"></i>&nbsp;20:00:00
 														</span>
-														<span class="btn-round" title=""
-															><button class="join-courses">
+														<span class="btn btn-round" title="join"
+															><button class="join-course">
 																Join now
 															</button></span
 														>
@@ -172,20 +184,20 @@
 												</div>
 											</a>
 										</article>
-										<article class="courses-item" id="css">
-											<a href="#" title="" class="wrap-courses-item">
-												<div class="thumb">
+										<article class="course-item" id="css">
+											<a href="#" title="" class="wrap-course-item">
+												<div class="course-thumb">
 													<img src="/images/css-logo.png" alt="css" />
 												</div>
 												<div class="view-content">
-													<h3 class="courses-title">CSS</h3>
+													<h3 class="course-title">CSS</h3>
 													<p>
 														CSS is the language we use to style an HTML
 														document. CSS describes how HTML elements should be
 														displayed. This tutorial will teach you CSS from
 														basic to advanced.
 													</p>
-													<div class="courses-info">
+													<div class="course-info">
 														<span class="lesson-count">
 															<i class="fas fa-tasks-alt"></i>&nbsp;32
 														</span>
@@ -193,7 +205,7 @@
 															<i class="fas fa-clock"></i>&nbsp;20:00:00
 														</span>
 														<span class="btn-round" title=""
-															><button class="join-courses">
+															><button class="join-course">
 																Join now
 															</button></span
 														>
@@ -201,18 +213,18 @@
 												</div>
 											</a>
 										</article>
-										<article class="courses-item" id="svg">
-											<a href="#" title="" class="wrap-courses-item">
-												<div class="thumb">
+										<article class="course-item" id="svg">
+											<a href="#" title="" class="wrap-course-item">
+												<div class="course-thumb">
 													<img src="/images/svg-logo.png" alt="svg" />
 												</div>
 												<div class="view-content">
-													<h3 class="courses-title">SVG</h3>
+													<h3 class="course-title">SVG</h3>
 													<p>
 														SVG stands for Scalable Vector Graphics. SVG defines
 														vector-based graphics in XML format.
 													</p>
-													<div class="courses-info">
+													<div class="course-info">
 														<span class="lesson-count">
 															<i class="fas fa-tasks-alt"></i>&nbsp;32
 														</span>
@@ -220,7 +232,37 @@
 															<i class="fas fa-clock"></i>&nbsp;20:00:00
 														</span>
 														<span class="btn-round" title=""
-															><button class="join-courses">
+															><button class="join-course">
+																Join now
+															</button></span
+														>
+													</div>
+												</div>
+											</a>
+										</article>
+										<article class="course-item" id="canvas">
+											<a href="#" title="" class="wrap-course-item">
+												<div class="course-thumb">
+													<img src="/images/canva-logo.png" alt="canvas" />
+												</div>
+												<div class="view-content">
+													<h3 class="course-title">Canvas</h3>
+													<p>
+														The HTML &lsaquo;canvas&rsaquo; element is used to
+														draw graphics on a web page. The graphic above is
+														created with &lsaquo;canvas&rsaquo;. It shows four
+														elements: a red rectangle, a gradient rectangle, a
+														multicolor rectangle, and a multicolor text.
+													</p>
+													<div class="course-info">
+														<span class="lesson-count">
+															<i class="fas fa-tasks-alt"></i>&nbsp;32
+														</span>
+														<span class="time">
+															<i class="fas fa-clock"></i>&nbsp;20:00:00
+														</span>
+														<span class="btn-round" title=""
+															><button class="join-course">
 																Join now
 															</button></span
 														>
@@ -233,13 +275,69 @@
 							</div>
 						</div>
 					</section>
-					<section class="wrap-block-training"></section>
+					<section class="wrap-block-training">
+						<div class="container">
+							<h3 class="heading-block">
+								Training
+								<a href="#">See all</a>
+							</h3>
+							<div class="wrap-tab-control">
+								<ul class="cl-tab-control">
+									<li class=""></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+					</section>
 					<section class="wrap-block-challenge"></section>
 					<section class="wrap-block-evaluating"></section>
 					<section class="wrap-block-discussion"></section>
 				</div>
 			</div>
 		</main>
+		<footer id="footer" class="coodcamp-footer">
+			<div class="zone zone-footer">
+				<div class="main-footer">
+					<div class="container">
+						<div class="row">
+							<div class="intro footer-column">
+								<div class="logo-html-learn">
+									<img src="/images/logo.png" alt="logo-html-learn" />
+								</div>
+								<p>
+									HTMLlearn is an online platform that helps users to learn,
+									practice coding skills and join the online coding contests.
+								</p>
+								<a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+								<a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+								<a href="#"><i class="fa-brands fa-line"></i></a>
+								<a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+							</div>
+							<div class="link footer-column">
+								<h4>LINKS</h4>
+								<p>Learing</p>
+								<p>Training</p>
+								<p>Challenge</p>
+								<p>Evaluating</p>
+							</div>
+							<div class="infor footer-column">
+								<h4>INFORMATION</h4>
+								<p>About me</p>
+								<p>Terms of Use</p>
+							</div>
+							<div class="help footer-column">
+								<h4>HELP</h4>
+								<p>Help</p>
+								<p>Discussion</p>
+								<p>Contact me</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right-reserved"></div>
+			</div>
+		</footer>
 		<script src="/static/fontawesome-free-6.4.0-web/js/all.js"></script>
 		<script src="/static/script.js"></script>
 	</body>
