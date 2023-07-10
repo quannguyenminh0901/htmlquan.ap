@@ -93,7 +93,13 @@
 							<!--BUTTON LOG-->
 							<ul class="site-user-menu">
 								<li>
-									<button id="login-header" class="btn btn-login">Login</button>
+									<button
+										id="login-header"
+										class="btn btn-login"
+										onclick="document.getElementById('login').style.display='block'"
+									>
+										Login
+									</button>
 									<button class="btn btn-register">Register</button>
 								</li>
 							</ul>
@@ -300,7 +306,7 @@
 			<div class="zone zone-footer">
 				<div class="main-footer">
 					<div class="container">
-						<div class="row">
+						<div class="row-list-course">
 							<div class="intro footer-column">
 								<div class="logo-html-learn">
 									<img src="/images/logo.png" alt="logo-html-learn" />
@@ -340,5 +346,45 @@
 		</footer>
 		<script src="/static/fontawesome-free-6.4.0-web/js/all.js"></script>
 		<script src="/static/script.js"></script>
+
+		<!--FORM LOGIN-->
+		<div class="modal" id="login">
+			<form action="" method="post" class="form-login">
+				<div class="img-container">
+					<img src="/images/person.png" alt="avt" />
+				</div>
+				<div class="login-container">
+					<label for="username"><b>Username</b></label>
+					<input
+						type="text"
+						placeholder="Enter username"
+						name="username"
+						required
+					/>
+					<label for="password"><b>Password</b></label>
+					<input
+						type="password"
+						placeholder="Enter password"
+						name="password"
+						required
+					/>
+
+					<button type="submit">Login</button>
+					<label for="">
+						<input type="checkbox" checked="checked" name="remember" />Remember
+						me
+					</label>
+				</div>
+				<div class="cancel-container">
+					<button
+						class="cancel-button"
+						onclick="document.getElementById('login').style.display='none'"
+					>
+						Cancel
+					</button>
+					<span class="forgot-pw"><a href="#">Forgot password?</a></span>
+				</div>
+			</form>
+		</div>
 	</body>
 </html>
