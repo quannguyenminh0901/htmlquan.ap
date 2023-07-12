@@ -25,8 +25,8 @@
     --gray: #6c757d;
     --gray-dark: #343a40;
     --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
+    --secondary: #b6bfc7;
+    --success: #45c763;
     --info: #17a2b8;
     --warning: #ffc107;
     --danger: #d85d69;
@@ -37,11 +37,15 @@
     outline: none !important;
 }
 body {
-    background-color: white;
+    background-color: rgba(188, 188, 188, 0.1);
     position: relative;
     -webkit-font-smoothing: antialiased;
     margin: 0;
     padding: 0;
+}
+body #layout-main {
+    flex-grow: 1;
+    padding-bottom: 60px;
 }
 /*NAVIGATION-BAR*/
 
@@ -302,9 +306,7 @@ main {
         color: var(--white);
     }
 }
-
 /*MAIN*/
-
 /*WRAP-BLOCK-USER*/
 
 .wrap-block-user {
@@ -348,8 +350,13 @@ main {
 .container {
     padding-right: 15px;
     padding-left: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+}
+.wrap-block-learning .container,
+.wrap-block-training .container {
+    margin: 15px auto !important;
+    padding: 5px 15px;
+    background-color: var(--white);
 }
 @media (min-width: 768px) {
     .container {
@@ -385,16 +392,19 @@ main {
     white-space: nowrap;
     font-size:1rem;   
     cursor: pointer;
-    transform: translateY(50px);
+    transform: translateY(0px);
 }
 @media (max-width: 993px) {
      .container .heading-block a {
         border: 1px solid;
         padding: 5px 8px;
         border-radius: 3px;
-        transform: translateY(6px);
+        transform: translateY(0px);
     }
-  }
+    .wrap-block-training .container .exercises .html-ex {
+        width: 100%;
+    }
+}
 /*WRAP-TAB-CONTROL*/
 .wrap-tab-control {
     display: inline-block;
@@ -665,6 +675,39 @@ main {
     scale: 1.05;
     color: var(--white);
 }
+/*WRAP_BLOCK_TRAINING*/
+.wrap-block-training {
+    margin-bottom: 40px;
+}
+.wrap-block-training .container .exercises {
+    display: grid;
+    grid-template-rows: auto;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 40px;
+}
+.exercises .html-ex {
+    width: 80%;
+    margin: 15px auto;
+    padding: 10px 15px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+    color: var(--white);
+}
+.exercises .html-ex .start-ex {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--success);
+    color: var(--white);
+    transition: all .3s ease;
+}
+.start-ex:hover {
+    cursor: pointer;
+    box-shadow: inset  2px  2px var(--teal);
+}
+/*FOOTER*/
 /*FOOTER*/
 .main-footer {
     padding: 35px 0 0;
@@ -672,14 +715,45 @@ main {
     font-size: 14px;
     color: var(--main-color);
     line-height: 20px;
-    border-top: 1px solid transparent;
+    border-top: 3px solid var(--secondary);
 }
 .main-footer .container .row-list-course .logo-html-learn {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .main-footer .container .row-list-course p {
     display: block;
     font-weight: 500;
+}
+.main-footer .container .row-list-course a {
+    font-size: 20px;
+}
+.main-footer .container .row-list-course a .fa-square-facebook {
+    color: var(--blue);
+}
+.main-footer .container .row-list-course a .fa-square-instagram {
+    color: var(--pink);
+}
+.main-footer .container .row-list-course a .fa-line {
+    color: var(--green);
+}
+.main-footer .container .row-list-course a .fa-square-twitter {
+    color: var(--button-hv-bg);
+}
+.element-footer {
+    margin: 0 !important; 
+    padding: 5px 0;
+    position: relative;
+    max-height: 35px;
+    width: 100%;
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+.element-footer p {
+    margin-block-start: 0px !important;
+    margin-block-end: 0px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @media (max-width: 985.45px) {
     #svg, #css, #canvas {
@@ -696,8 +770,20 @@ main {
       transform: scale(1);
     }
 }
-/*FORM LOGIN*/
-.form-login {
+/*FORM*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 80px;
+}
+.form-login, .form-register {
     border: 3px solid whitesmoke;
     border-radius: 1%;
     margin: 0 auto;
@@ -710,7 +796,8 @@ main {
     transform: translateX(50%);
 }
 input[type=text],
-input[type=password] {
+input[type=password],
+input[type=email] {
     width: 100%;
     padding: 12px 18px;
     margin: 8px 0;
@@ -718,7 +805,33 @@ input[type=password] {
     border: 1px solid rgb(108, 108, 108);
     display: inline-block;
 }
-.login-container button {
+.username {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.username .show {
+    padding-left: 5px;
+    text-decoration: none;
+    color: black;
+}
+.username span {
+    display: flex;
+    align-items: center;
+}
+.username span i {
+    padding-right: 5px;
+}
+.username span span {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #007bff;
+}
+.username span span:hover {
+    color: red;
+}
+button[type=submit] {
     background-color: #28a745;
     color: white;
     padding: 8px 0;
@@ -744,19 +857,11 @@ button:hover {
 .forgot-pw {
     float: right;
 }
-.login-container, .cancel-container {
-    padding: 0 15px 5px 15px;
+.login-container, .register-container {
+    padding: 10px 10px;
 }
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding-top: 50px;
+.cancel-container {
+    margin: 5px 0;
 }
+
 

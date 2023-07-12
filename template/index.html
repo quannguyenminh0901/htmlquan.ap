@@ -283,18 +283,28 @@
 					</section>
 					<section class="wrap-block-training">
 						<div class="container">
-							<h3 class="heading-block">
-								Training
+							<h3 class="heading-block">Training
 								<a href="#">See all</a>
 							</h3>
-							<div class="wrap-tab-control">
-								<ul class="cl-tab-control">
-									<li class=""></li>
-									<li></li>
-									<li></li>
-								</ul>
+							<div class="exercises">
+								<div class="html-ex html-training">
+									<div class="title-ex"><h3>Start HTML Exercises</h3>
+									</div>
+									<p>Good luck!</p>
+									<button class="start-ex">Start HTML Exercises&nbsp;&#62;</button>
+								</div>
+								
+								<div class="html-ex css-training">
+									<div class="title-ex"><h3>Start CSS Exercises </h3>
+									</div>
+									<p>Good luck!</p>
+									<button class="start-ex">Start CSS Exercises&nbsp;&#62;</button>
+								</div>
+								
+								</div>
 							</div>
 						</div>
+						
 					</section>
 					<section class="wrap-block-challenge"></section>
 					<section class="wrap-block-evaluating"></section>
@@ -302,6 +312,7 @@
 				</div>
 			</div>
 		</main>
+		<!--FOOTER-->
 		<footer id="footer" class="coodcamp-footer">
 			<div class="zone zone-footer">
 				<div class="main-footer">
@@ -320,71 +331,129 @@
 								<a href="#"><i class="fa-brands fa-line"></i></a>
 								<a href="#"><i class="fa-brands fa-square-twitter"></i></a>
 							</div>
-							<div class="link footer-column">
-								<h4>LINKS</h4>
-								<p>Learing</p>
-								<p>Training</p>
-								<p>Challenge</p>
-								<p>Evaluating</p>
-							</div>
-							<div class="infor footer-column">
-								<h4>INFORMATION</h4>
-								<p>About me</p>
-								<p>Terms of Use</p>
-							</div>
-							<div class="help footer-column">
-								<h4>HELP</h4>
-								<p>Help</p>
-								<p>Discussion</p>
-								<p>Contact me</p>
-							</div>
 						</div>
+						
 					</div>
 				</div>
-				<div class="right-reserved"></div>
+				<div class="element-footer">
+					<p>&copy;&nbsp;HTMLlearn 2023. All source code of Nguyen Minh Quan</p>
+				</div>
 			</div>
 		</footer>
-		<script src="/static/fontawesome-free-6.4.0-web/js/all.js"></script>
-		<script src="/static/script.js"></script>
-
 		<!--FORM LOGIN-->
 		<div class="modal" id="login">
 			<form action="" method="post" class="form-login">
-				<div class="img-container">
-					<img src="/images/person.png" alt="avt" />
-				</div>
 				<div class="login-container">
-					<label for="username"><b>Username</b></label>
+					<div class="img-container">
+						<img src="/images/person.png" alt="avt" />
+					</div>
+					<div class="username">
+						<label for="username"><b>Username</b></label>
+						<span
+							><i>Need an account?</i>
+							<span
+								onclick="document.getElementById('register').style.display='block';
+								document.getElementById('login').style.display='none'"
+								>Register
+							</span>
+						</span>
+					</div>
 					<input
 						type="text"
 						placeholder="Enter username"
 						name="username"
 						required
 					/>
-					<label for="password"><b>Password</b></label>
+					<div class="username">
+						<label for="password"><b>Password</b></label>
+						<span
+							><i class="fa-solid fa-eye"></i>
+							<span class="show">show</span>
+						</span>
+					</div>
 					<input
 						type="password"
 						placeholder="Enter password"
 						name="password"
 						required
 					/>
-
 					<button type="submit">Login</button>
 					<label for="">
 						<input type="checkbox" checked="checked" name="remember" />Remember
 						me
 					</label>
-				</div>
-				<div class="cancel-container">
-					<button
-						class="cancel-button"
-						onclick="document.getElementById('login').style.display='none'"
-					>
-						Cancel
-					</button>
-					<span class="forgot-pw"><a href="#">Forgot password?</a></span>
+					<div class="cancel-container">
+						<button
+							class="cancel-button"
+							onclick="document.getElementById('login').style.display='none'"
+						>
+							Cancel
+						</button>
+						<span class="forgot-pw"><a href="#">Forgot password?</a></span>
+					</div>
 				</div>
 			</form>
 		</div>
+		<!--FORM REGISTER-->
+		<div class="modal" id="register">
+			<form action="" method="post" class="form-register">
+				<div class="register-container">
+					<div class="username">
+						<label for="username"><b>Username</b></label>
+						<span
+							><i>You have an account?</i>
+							<span
+								onclick="document.getElementById('login').style.display='block';
+								document.getElementById('register').style.display='none'"
+								>Login</span
+							></span
+						>
+					</div>
+					<input
+						type="text"
+						placeholder="Username..."
+						name="username"
+						required
+					/>
+					<label for="email">Email</label>
+					<input type="email" id="email" placeholder="Email..." />
+					<div class="username">
+						<label for="password"><b>Password</b></label>
+						<span
+							><i class="fa-solid fa-eye"></i>
+							<span class="show">show</span>
+						</span>
+					</div>
+					<input
+						type="password"
+						placeholder="New password..."
+						name="password"
+						required
+					/>
+					<div class="username">
+						<label for="password"><b>Password</b></label>
+					</div>
+					<input
+						type="password"
+						placeholder="Confirm password..."
+						name="password"
+						required
+					/>
+					<div>
+						<button type="submit">Register</button>
+					</div>
+					<div class="cancel-container">
+						<button
+							class="cancel-button"
+							onclick="document.getElementById('register').style.display='none'"
+						>
+							Cancel
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<script src="/static/fontawesome-free-6.4.0-web/js/all.js"></script>
+		<script src="/static/script.js"></script>
 	</body>
 </html>
