@@ -1,6 +1,8 @@
 **COMPLETE** 
+### Begin
+19/06/2023
 ### Finish
-9:16 pm 7/12/2023
+🕤9:30pm 7/12/2023
 ### Group 12
 Nguyen Minh Quan - 21010617
 ### Project
