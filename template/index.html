@@ -40,19 +40,47 @@
 								class="menu-checkbox"
 							/>
 							<label for="mobile-menu-cb" class="hamburger-button">
-								<span class="hamburger-icon" onclick="myFunction()"
+								<span class="hamburger-icon" onclick="document.getElementById('hamburger-menu-mask').style.display='block'"
 									><i class="fa-solid fa-bars"></i
 								></span>
 							</label>
-							<label for="mobile-menu-cb" class="hamburger-menu-mask"></label>
+							<label for="mobile-menu-cb" class="hamburger-menu-mask" id="hamburger-menu-mask">
+								<ul class="menu menu-main-menu" id="main-menu-dropdown">
+									<!--LIST MENU MAIN MOBILE-->
+									<a href="" class="closebtn" onclick="document.getElementById('main-menu-dropdown').style.width='0%'">&times;</a>
+									<li><a class="current" href="#learning">Learning</a></li>
+									<li><a class="current" href="#training">Training</a></li>
+									<li><a class="current" href="#">Challenge</a></li>
+									<li><a class="current" href="#">Evaluating</a></li>
+									<li><a class="current" href="#">About Us</a></li>
+									<li>
+										<span class="change-lang">
+											<img
+												src="/images/en.jpg"
+												alt=""
+												class="icon-language"
+											/>&nbsp;&nbsp;English
+										</span>
+									</li>
+									<li>
+										<span class="change-lang"	>
+											<img
+												src="/images/vn.png"
+												alt=""
+												class="icon-language"
+											/>&nbsp;&nbsp;Tiếng Việt
+										</span>
+									</li>
+								</ul>
+							</label>
 							<nav class="site-menu">
 								<ul class="menu menu-main-menu" id="main-menu-dropdown">
 									<!--LIST MENU MAIN-->
-									<li><a class="current" href="#">Learing</a></li>
-									<li><a class="current" href="#">Training</a></li>
+									<li><a class="current" href="#learning">Learning</a></li>
+									<li><a class="current" href="#training">Training</a></li>
 									<li><a class="current" href="#">Challenge</a></li>
 									<li><a class="current" href="#">Evaluating</a></li>
-									<li><a class="current" href="#">Discussion</a></li>
+									<li><a class="current" href="#">About Us</a></li>
 								</ul>
 								<!--BUTTON DROPDOWN LANGUAGE-->
 								<div class="dropdown dropdown-language">
@@ -66,11 +94,12 @@
 											src="/images/en.jpg"
 											alt=""
 											class="btn-language btn-img flag"
+											onclick="document.getElementById('dropdown-menu').style.display='block'";
 										/>
 									</a>
-									<ul class="dropdown-menu">
+									<ul class="dropdown-menu" id="dropdown-menu">
 										<li>
-											<span class="change-lang">
+											<span class="change-lang" onclick="document.getElementById('dropdown-menu').style.display='none'">
 												<img
 													src="/images/en.jpg"
 													alt=""
@@ -79,7 +108,7 @@
 											</span>
 										</li>
 										<li>
-											<span class="change-lang">
+											<span class="change-lang" onclick="document.getElementById('dropdown-menu').style.display='none'">
 												<img
 													src="/images/vn.png"
 													alt=""
@@ -106,13 +135,6 @@
 						</div>
 					</header>
 				</article>
-				<article class="widget-nav widget-bread-cumps">
-					<div
-						class="fb-customer-chat"
-						attribution="setup_tool"
-						page_id=""
-					></div>
-				</article>
 			</div>
 		</div>
 		<!--MAIN-->
@@ -137,7 +159,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="wrap-block-learning">
+					<section class="wrap-block-learning" id="learning">
 						<div class="container">
 							<h3 class="heading-block">
 								Courses
@@ -281,7 +303,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="wrap-block-training">
+					<section class="wrap-block-training" id="training">
 						<div class="container">
 							<h3 class="heading-block">Training
 								<a href="#">See all</a>
@@ -304,11 +326,7 @@
 								</div>
 							</div>
 						</div>
-						
 					</section>
-					<section class="wrap-block-challenge"></section>
-					<section class="wrap-block-evaluating"></section>
-					<section class="wrap-block-discussion"></section>
 				</div>
 			</div>
 		</main>
@@ -453,7 +471,53 @@
 				</div>
 			</form>
 		</div>
+		<!--CHATBOX-->
+	<div class="chatbox-wrapper">
+		<div class="chatbox-toggle">
+			<i class="fa-brands fa-facebook-messenger"></i>
+		</div>
+		<div class="chatbox-message-wrapper">
+			<div class="chatbox-message-header">
+				<div class="chatbox-message-profile">
+					<img
+						src="/images/person.png"
+						alt="avt-chat-ai"
+						class="chatbox-message-image"
+					/>
+					<div class="profile-ai">
+						<h4 class="chatbox-message-name">Tư vấn viên AI</h4>
+						<p class="chatbox-message-status">offline</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="chatbox-message-content">
+				<h4 class="chatbox-message-no-message">
+					Welcome to HTMLlearn!
+				</h4>
+			</div>
+			<div class="chatbox-message-bottom">
+				<form action="#" class="chatbox-message-form">
+					<textarea
+						rows="1"
+						placeholder="Type message..."
+						class="chatbox-message-input"
+					></textarea>
+					<button class="chatbox-message-submit">
+						<a href="#">Send</a>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		const chatboxToggle = document.querySelector('.chatbox-toggle');
+		const chatboxMessage = document.querySelector('.chatbox-message-wrapper');
+
+		chatboxToggle.addEventListener('click', function () {
+			chatboxMessage.classList.toggle('show');
+		});
+	</script>
 		<script src="/static/fontawesome-free-6.4.0-web/js/all.js"></script>
-		<script src="/static/script.js"></script>
 	</body>
 </html>

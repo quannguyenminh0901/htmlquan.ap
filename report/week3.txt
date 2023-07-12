@@ -1,14 +1,13 @@
 ## Nhóm 12
 
-## Thành viên nhóm:
-
+##Thành viên nhóm:
 1. Nguyễn Minh Quân - 21010617
 
 ## Github:
 
 - https://github.com/quannguyenminh0901/htmlquan.ap
 
+###BÁO CÁO WEEK 3
 
-### BÁO CÁO WEEK 2
-
--Làm main, css
+- footer
+-hoàn thiện javascript đơn giản
