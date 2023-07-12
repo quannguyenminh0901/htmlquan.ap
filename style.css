@@ -255,7 +255,7 @@ main {
     position: fixed;
     top: 0;
     left: 0;
-    width: 25%;
+    width: 45%;
     height: 100%;
     background-color: var(--white);
     transition: transform .3s ease-in-out;
@@ -995,6 +995,12 @@ button:hover {
     font-weight: 550;
     color: var(--white);
 }
-
-
+@media (max-width: 550px) {
+    .username span i{
+        display: none;
+    }
+    .chatbox-wrapper {
+        display: none;
+    }
+}
 
